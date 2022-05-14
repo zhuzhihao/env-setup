@@ -20,8 +20,7 @@ esac
 # assume run as root, and source updated already
 apt install -y fzf
 
-apt search --names-only '^bat$' 2>/dev/null |grep bat
-if [[ $? -eq 0 ]]; then
+if [[ $(apt search --names-only '^bat$' 2>/dev/null |grep bat) -eq 0 ]]; then
 	apt install -y bat
 else
 	curl -sS https://github.com/sharkdp/bat/releases/download/v0.21.0/bat_0.21.0_${ARCH}.deb|xargs dpkg -i
