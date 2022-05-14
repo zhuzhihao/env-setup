@@ -32,13 +32,15 @@ jobs:
         run: |
           mkdir staging
           tar --exclude-vcs --exclude=staging/ -czvf staging/release.tar.gz .
+          tar -C staging -zxf staging/release.tar.gz
+          rm staging/release.tar.gz
       
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.0.0
         with:
           # Artifact name
           name:
-            release.tar.gz
+            release
           # A file, directory or wildcard pattern that describes what to upload
           path: 
-            staging/release.tar.gz
+            staging/
