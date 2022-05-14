@@ -31,7 +31,7 @@ jobs:
       - name: Make release package
         run: |
           mkdir staging
-          tar --exclude-vcs --exclude=staging/ -czvf staging/release.tar.gz .
+          tar --exclude-vcs --exclude=staging/ --exclude=.github/ -czvf staging/release.tar.gz .
           tar -C staging -zxf staging/release.tar.gz
           rm staging/release.tar.gz
       
