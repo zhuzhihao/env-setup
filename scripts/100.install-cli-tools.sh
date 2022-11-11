@@ -19,13 +19,8 @@ esac
 
 # assume run as root, and source updated already
 apt install -y fzf
-
+apt install -y exa
 if [[ -n $(apt search --names-only '^bat$' 2>/dev/null |grep bat) ]]; then
         apt install -y bat
-else
-        wget https://github.com/sharkdp/bat/releases/download/v0.21.0/bat_0.21.0_${ARCH}.deb
-        dpkg -i bat*.deb
 fi
-
-apt install -y exa
 

@@ -7,7 +7,7 @@ fi
 
 WORK_DIR=$(mktemp -d )
 # download package to tmp dir
-wget https://github.com/zhuzhihao/env-setup/releases/download/v0.0.1/release.zip -O $WORK_DIR/env-setup.zip
+wget https://github.com/zhuzhihao/env-setup/releases/latest/download/release.zip -O $WORK_DIR/env-setup.zip
 
 pushd $WORK_DIR
 unzip env-setup.zip
