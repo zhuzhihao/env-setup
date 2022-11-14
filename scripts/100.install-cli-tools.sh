@@ -18,7 +18,16 @@ case $(uname -m) in
 esac
 
 # assume run as root, and source updated already
-apt install -y fzf exa htop bmon traceroute iotop bash-completion
+apt install -y fzf \
+	       exa \
+	       htop \
+	       bmon \
+	       traceroute \
+	       iotop \
+	       bash-completion \
+	       lsof \
+	       dnsutils
+	       
 if [[ -n $(apt search --names-only '^bat$' 2>/dev/null |grep bat) ]]; then
         apt install -y bat
 fi
