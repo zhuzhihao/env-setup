@@ -18,9 +18,7 @@ case $(uname -m) in
 esac
 
 # assume run as root, and source updated already
-apt install -y fzf
-apt install -y exa
+apt install -y fzf exa htop bmon traceroute iotop bash-completion
 if [[ -n $(apt search --names-only '^bat$' 2>/dev/null |grep bat) ]]; then
         apt install -y bat
 fi
-
