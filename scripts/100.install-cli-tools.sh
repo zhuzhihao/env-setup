@@ -26,7 +26,10 @@ apt install -y fzf \
 	       iotop \
 	       bash-completion \
 	       lsof \
-	       dnsutils
+	       dnsutils \
+	       git \
+	       sudo \
+	       open-iscsi 
 	       
 if [[ -n $(apt search --names-only '^bat$' 2>/dev/null |grep bat) ]]; then
         apt install -y bat
